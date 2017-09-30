@@ -1,5 +1,6 @@
 import  _ from 'lodash'; 
 import $ from 'jquery';
+import foo from './foo'
 
 function component(){
     var element = $('<div></div>').html(_.join(['hihelsdsflo','harrisking'],' '));
@@ -7,3 +8,4 @@ function component(){
 }
 
 document.body.appendChild(component());
+console.log(foo())
