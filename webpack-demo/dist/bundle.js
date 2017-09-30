@@ -77,7 +77,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 function component(){
-    var element = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('<div></div>').html(__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['hihello','harrisking'],' '));
+    var element = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('<div></div>').html(__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['hihelsdsflo','harrisking'],' '));
     return element.get(0);
 }
 
