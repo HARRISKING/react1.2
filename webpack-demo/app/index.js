@@ -3,7 +3,7 @@ import $ from 'jquery';
 import foo from './foo'
 
 function component(){
-    var element = $('<div></div>').html(_.join(['hihelsdsflo','harrisking'],' '));
+    var element = $('<div></div>').html(_.join(['hilo','harrisking'],' '));
     return element.get(0);
 }
 
