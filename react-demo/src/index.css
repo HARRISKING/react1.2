@@ -1,5 +1,24 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+body{
+  background: #ddd;
+}
+#root{
+  display: flex;
+  justify-content: center;
+}
+.quadrant-all{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+.quadrant-all .App:first-child{
+  background: rgb(245, 148, 3);
+}
+.quadrant-all .App:nth-child(2){
+  background: rgb(187, 28, 28);
+}
+.quadrant-all .App:nth-child(3){
+  background: hsl(64, 89%, 50%);
+}
+.quadrant-all .App:nth-child(4){
+  background: rgb(76, 190, 10);
 }
