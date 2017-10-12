@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Welcome from './Welcome';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(
-    <h1>之前出现错误的原因是目录出现错误！！！</h1>, 
-    document.getElementById('root')
-);
-registerServiceWorker();
+function tick() {
+    const element = (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+    );
+
+    ReactDOM.render(
+      <App />,
+      document.getElementById('root')
+    );
+  }
+  
+  setInterval(tick, 1000);
