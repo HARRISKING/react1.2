@@ -26,12 +26,15 @@ class App extends React.Component{
         return (
             <div className="App">
                 <h1>{this.props.title}</h1>
-                <TodoInput newTodos={this.state.newTodo}/>
+                <TodoInput newTodos={this.state.newTodo} onSubmit={this.addTodo}/>
                 <ol>
                     {todos}
                 </ol>
             </div>
         )
+    }
+    addTodo(){
+        console.log("我增加了list")
     }
 }
 
