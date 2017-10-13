@@ -17,7 +17,7 @@ class App extends React.Component{
     render(){
 
         let todos = this.state.todoList.filter((item)=>!item.deleted).map((item,index)=>{
-            return (
+            return ( 
                <li key={index}>
                     <TodoItems todo={item} 
                     onToggle={this.toggle.bind(this)} 
@@ -31,7 +31,7 @@ class App extends React.Component{
                 <TodoInput newTodos={this.state.newTodo} 
                 onSubmit={this.addTodo.bind(this)} 
                 onChange={this.changeTitle.bind(this)}/>
-                <ol>
+                <ol className='todoList'>
                     {todos}
                 </ol>
             </div>
