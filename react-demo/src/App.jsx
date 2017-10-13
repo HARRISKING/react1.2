@@ -9,33 +9,54 @@ class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            todoList:[
-                {id:'1',title:'我要做啥',status:'completed',deleted:'false'},
-                {id:'2',title:'吃饭',status:'completed',deleted:'false'},
-                {id:'3',title:'睡觉',status:'completed',deleted:'false'}
-            ],
-            newTodo:'test'
+            todoList:[],
+            newTodo:''
         }
     }
 
     render(){
 
         let todos = this.state.todoList.map((item,index)=>{
-            return <TodoItems todo={item}/>
+            return (
+               <li key={index}>
+                    <TodoItems todo={item}/>
+               </li> 
+            )
         })
         return (
             <div className="App">
                 <h1>{this.props.title}</h1>
-                <TodoInput newTodos={this.state.newTodo} onSubmit={this.addTodo}/>
+                <TodoInput newTodos={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)}/>
                 <ol>
                     {todos}
                 </ol>
             </div>
         )
     }
-    addTodo(){
-        console.log("我增加了list")
+    changeTitle(event){
+        this.setState({
+            newTodo: event.target.value,
+            todoList: this.state.todoList
+
+        })
     }
+    addTodo(event){
+        this.state.todoList.push({
+            id: idMaker(),
+            title: event.target.value,
+            status: null,
+            deleted: false
+        })
+        this.setState({
+            newTodo: '',
+            todoList: this.state.todoList
+        })
+    }
+}
+let id = 0;
+function idMaker(){
+    id += 1;
+    return id;
 }
 
 export default App;
