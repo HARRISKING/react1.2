@@ -16,23 +16,37 @@ class App extends React.Component{
 
     render(){
 
-        let todos = this.state.todoList.map((item,index)=>{
+        let todos = this.state.todoList.filter((item)=>!item.deleted).map((item,index)=>{
             return (
                <li key={index}>
-                    <TodoItems todo={item}/>
+                    <TodoItems todo={item} 
+                    onToggle={this.toggle.bind(this)} 
+                    onDelete={this.delete.bind(this)}/>
                </li> 
             )
         })
         return (
             <div className="App">
                 <h1>{this.props.title}</h1>
-                <TodoInput newTodos={this.state.newTodo} onSubmit={this.addTodo.bind(this)} onChange={this.changeTitle.bind(this)}/>
+                <TodoInput newTodos={this.state.newTodo} 
+                onSubmit={this.addTodo.bind(this)} 
+                onChange={this.changeTitle.bind(this)}/>
                 <ol>
                     {todos}
                 </ol>
             </div>
         )
     }
+    delete(event,todo){
+        todo.deleted = true;
+        this.setState(this.state)
+    }
+
+    toggle(e,todo){
+        todo.status = todo.status === 'completed' ? '' : 'completed'
+        this.setState(this.state)
+    }
+
     changeTitle(event){
         this.setState({
             newTodo: event.target.value,
@@ -40,6 +54,7 @@ class App extends React.Component{
 
         })
     }
+
     addTodo(event){
         this.state.todoList.push({
             id: idMaker(),
