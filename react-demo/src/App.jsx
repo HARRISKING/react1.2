@@ -62,16 +62,18 @@ class App extends React.Component{
     }
 
     addTodo(event){
-        this.state.todoList.push({
-            id: idMaker(),
-            title: event.target.value,
-            status: null,
-            deleted: false
-        })
-        this.setState({
-            newTodo: '',
-            todoList: this.state.todoList
-        })
+        if(event.target.value){
+            this.state.todoList.push({
+                id: idMaker(),
+                title: event.target.value,
+                status: null,
+                deleted: false
+            })
+            this.setState({
+                newTodo: '',
+                todoList: this.state.todoList
+            })
+        }
     }
 }
 let id = 0;
