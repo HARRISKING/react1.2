@@ -4,12 +4,14 @@ import TodoItems from './TodoItems';
 import 'normalize.css';
 import './reset.css';
 import './App.css';
+import * as localStore from './localStore';
 
 class App extends React.Component{
+
     constructor(props){
         super(props);
         this.state = {
-            todoList:[],
+            todoList:localStore.load(this.props.idx) || [],
             newTodo:''
         }
     }
@@ -37,9 +39,14 @@ class App extends React.Component{
             </div>
         )
     }
+
+    componentDidUpdate(){
+        localStore.save(this.props.idx, this.state.todoList)
+    }
+
     delete(event,todo){
         todo.deleted = true;
-        this.setState(this.state)
+        this.setState(this.state);
     }
 
     toggle(e,todo){
@@ -51,7 +58,6 @@ class App extends React.Component{
         this.setState({
             newTodo: event.target.value,
             todoList: this.state.todoList
-
         })
     }
 
