@@ -11,16 +11,16 @@ body{
   max-width: 1000px;
 }
 .quadrant-all .App:first-child{
-  background: rgb(245, 148, 3);
+  background: rgb(249, 232, 142);
 }
 .quadrant-all .App:nth-child(2){
-  background: rgb(187, 28, 28);
+  background: rgb(234, 73, 62);
 }
 .quadrant-all .App:nth-child(3){
-  background: hsl(64, 89%, 50%);
+  background: rgb(94, 179, 239);
 }
 .quadrant-all .App:nth-child(4){
-  background: rgb(76, 190, 10);
+  background: rgb(81, 113, 27);
 }
 .allTitle{
   text-align: center;

@@ -18,6 +18,24 @@ import AV from './leanCloud'
 //   alert('LeanCloud Rocks!');
 // })
 
+
+
+// var TodoFolder = AV.Object.extend('TodoFolder');
+// var todoFolder =  new TodoFolder();
+
+// todoFolder.set('name','工作');
+// todoFolder.set('priority','1');
+// todoFolder.save().then(function(todo){
+//     console.log('objectID is'+ todo.id);
+// },function (error){
+//     console.error(error);
+// });
+
+
+
+
+
+
 class App extends React.Component{
 
     constructor(props){

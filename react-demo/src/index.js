@@ -15,7 +15,7 @@ import App from './App';
           <App title="紧急但不重要" idx='Ba' />
           <App title="不紧急也不重要" idx='ba'/>
         </div>
-        <h3 className='footerTitle'>本程序归HARRISKING所有，侵权必究！</h3>
+        <h3 className='footerTitle'>AUTHOR_HARRISKING</h3>
       </div>,
       document.getElementById('root')
     );
