@@ -1,6 +1,5 @@
 .App{
     color: #333;
-    border:1px solid #aaa;
     border-radius: 4px;
     /* background: #fff; */
     margin: 2em;
@@ -12,8 +11,10 @@
 }
 
 .App > .todoList > li:nth-child(odd){
-    background: #eee;
+    background: #fff;
 }
 .App > .todoList > li:nth-child(even){
-    background: transparent;
+    background: #ddd;
+    margin: 10px 0;
+    
 }
