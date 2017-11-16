@@ -52,7 +52,6 @@ class App extends React.Component{
     }
 
     componentDidUpdate(){
-        localStore.save(this.props.idx, this.state.todoList)
     }
 
     delete(event,todo){
