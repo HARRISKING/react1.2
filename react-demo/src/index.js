@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import UserDialog from './UserDialog';
+
 // import registerServiceWorker from './registerServiceWorker';
 
 
@@ -14,8 +16,10 @@ import App from './App';
           <App title="重要又急迫" idx='AB' />
           <App title="紧急但不重要" idx='Ba' />
           <App title="不紧急也不重要" idx='ba'/>
+          <UserDialog />
+
         </div>
-        <h3 className='footerTitle'>AUTHOR_HARRISKING</h3>
+        <h3 className='footerTitle'>AUTHORED_BY_HARRISKING</h3>
       </div>,
       document.getElementById('root')
     );

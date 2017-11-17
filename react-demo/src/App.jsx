@@ -4,20 +4,6 @@ import TodoItems from './TodoItems';
 import 'normalize.css';
 import './reset.css';
 import './App.css';
-// import * as localStore from './localStore';
-
-import AV from './leanCloud'
-
-
-
-
-
-
-
-
-
-
-
 class App extends React.Component{
 
     constructor(props){
