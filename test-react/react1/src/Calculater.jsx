@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Boling from './Boling'
+import TemperatureInput from './TemInput'
 class Calculater extends Component {
     constructor(props) {
         super(props)
@@ -18,6 +19,8 @@ class Calculater extends Component {
             <div>
                 <Boling celsius={parseFloat(this.state.temperature)} />
                 <input type="text" value={this.state.celtemperaturesius} onChange={this.temperatureOnchange.bind(this)}/>
+                <TemperatureInput scale="c" />
+                <TemperatureInput scale="f" />
             </div>
         )
     }
