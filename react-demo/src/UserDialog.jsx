@@ -6,6 +6,10 @@ export default class UserDialog extends Component{
         super(props);
         this.state= {
             selected: 'signUp',
+            formData: {
+                username:'',
+                password:'',
+            }
         }
     }
     switch(e){
@@ -13,7 +17,12 @@ export default class UserDialog extends Component{
             selected: e.target.value
         })
     }
-
+    signUp(e){}
+    signIn(e){}
+    changeUserame(e){
+        // this.state.formData.username = e.target.value
+        // this.setState(this.state)
+    }
     render(){
         return (
             <div className="UserDialog-Wrapper">
